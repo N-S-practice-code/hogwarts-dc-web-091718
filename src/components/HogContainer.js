@@ -1,21 +1,13 @@
 
-import React, { Component } from 'react';
+import React from 'react';
 import HogCard from './HogCard'
 
 class HogContainer extends React.Component {
-  constructor(props) {
-    super(props)
-    debugger
-    this.state = {
-      displayHogs: this.props.hogdata
-    };
-  }
 
   generateHogCards = () => {
-    debugger
-    return "test"
-    return this.props.allHogs.map(function (hog) {
-      return (<HogCard hogData={hog} />)
+    if (!this.props.hogs){return (<div></div>)}
+    return this.props.hogs.map(function (hog) {
+      return (<HogCard key={hog.name} hogData={hog} />)
     })
   }
 

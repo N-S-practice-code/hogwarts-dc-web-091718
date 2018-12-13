@@ -5,10 +5,10 @@ class HogFilter extends React.Component {
 
   render() {
     return (
-      <div className="ui form">
-        <h3>Filter</h3>
+      <div className="navWrapper">
         <div className="field">
-          <select name="type" id="type" onChange={event => console.log(event)}>
+        {"Filter "}
+          <select name="type" id="type" onChange={this.props.setFilter}>
             <option value="all">All</option>
             <option value="greased">Greased</option>
             <option value="unGreased">Ungreased</option>
